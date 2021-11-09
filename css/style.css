@@ -18,13 +18,61 @@
     float: right;
 }
 
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 12px;
+    word-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 55px;
+    word-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.bt {
+    height: 30px; 
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.bt a {
+    text-decoration: none;
+}
+
+.bt.main {
+    width: 250px;
+    background-color: #0064fa;
+    padding: 0 5px;
+}
+
+.bt.main a {
+    color: white;
+}
+
+
 /* -------------------------------------------------- */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
 
-/* header */
 header {
     width: 1200px;
     margin: 0 auto;
@@ -57,27 +105,11 @@ ul.navbar-list li{
 }
 
 ul li a {
-    /* text-transform: capitalize; */
     text-decoration: none;
     color: #000;
 }
 
-.bt-blue {
-    width: 250px;
-    height: 30px; 
-    line-height: 30px;
-    font-size: 12px;
-    text-align: center;
-    background-color: #0064fa;
-    padding: 0 5px;
-}
-
-.bt-blue a {
-    color: white;
-    text-decoration: none;
-}
-
-#bt-start {
+#bt-small {
     width: 60px;
     margin: 15px 0;
 }
@@ -91,45 +123,28 @@ ul li a {
     padding: 20px 40px;
 }
 
-.container {
-    width: 1000px;
-    margin: 0 auto;
-}
-
 .container.jumbo {
     padding-top: 50px;
     height: 500px;
 }
 
-h1 {
-    font-size: 56px;
-    word-spacing: 5px;
-    margin-bottom: 30px;
-}
-
-.container-text-jumbo {
+.jumbo-text {
     width: 320px;
     height: 250px;
 }
 
-p {
-    font-size: 12px;
-    word-spacing: 3px;
-    margin-bottom: 25px;
-}
-
-.container-image-jumbo {
+.image-jumbo {
     width: 650px;
     position: relative;
 }
 
-.container-image-jumbo img {
+.image-jumbo img {
     width: 600px;
     position: absolute;
     top: 10px;
 }
 
-.bt-blue.jumbo {
+.bt.main.jumbo {
     margin-bottom: 15px;
 }
 
@@ -141,13 +156,8 @@ i.fas.fa-arrow-down {
 
 /* container pricing */
 .container.pricing{
-    width: 1000px;
     height: 950px;
     margin-top: 150px;
-}
-h2 {
-    font-size: 35px;
-    text-align: left;
 }
 
 form {
@@ -158,14 +168,25 @@ form label {
     margin-right: 20px;
 }
 
-/* section professional */
+/* col-content */
+.col-content{
+    width: calc((100%/3) - (100px/3));
+    height: 800px;
+    border: 1px lightgrey solid;
+}
+
+.col-content {
+    margin-right:50px;
+} 
+
+.col-content.advanced {
+    margin-right: 0;
+}
+
 .item-top { 
     height: 40px;
     line-height: 40px;
     border-bottom: 1px lightgrey solid;
-}
-
-.item-top p {
     text-align: center;
 }
 
@@ -183,22 +204,14 @@ form label {
     content: "\f1ad";
 }
 
-.col-content{
-    width: calc((100%/3) - (30px/3));
-    height: 800px;
-    border: 1px lightgrey solid;
-}
-
-.col-content.standard {
-    margin: 0 15px;
-} 
-
-.details, .plane-list {
+.details, 
+.plane-list {
     padding: 15px 20px;
 }
 
-.price {
-    margin: 15px 0;
+.price,
+.purchase {
+    margin: 20px 0;
 }
 
 .price::after {
@@ -213,12 +226,9 @@ form label {
     margin-bottom: 30px;
 }
 
-.far, .fas {
+.far, 
+.fas {
     margin-right: 5px;
-}
-
-.purchase {
-    margin: 20px 0;
 }
 
 hr {
@@ -247,20 +257,19 @@ h5 {
 /* /container pricing */
 
 /* container enterprise */  
-    .enterprise {
-        height: 160px;
-        border: 1px lightgrey solid;
-    }
+.container.enterprise {
+    height: 160px;
+    border: 1px lightgrey solid;
+}
 
-    .bt-blue.bt-enterprise {
-        margin-top: 20px;
-        margin-right: 20px; 
-    }
+.bt-enterprise {
+    margin-top: 20px;
+    margin-right: 20px; 
+}
 /* / container enterprise */
 
-/* container partner dropbox */
+/* container partner */
 .container.partner {
-    width: 1000px;
     margin-top: 80px;
 }
 
@@ -277,10 +286,6 @@ h5 {
     margin: 20px 0;
 }
 
-h3 {
-    font-size: 25px;
-}
-
 .partner-prg {
     font-size: 15px;
     word-spacing: 5px;
@@ -289,9 +294,9 @@ h3 {
     margin-top: 20px;
 }
 
-.bt-special {
-    font-size: 15px;
+.bt-partner {
     width: 150px;
+    font-size: 15px;
     background-color: #fff;
     border: 1px #000 solid;
     position: relative;
@@ -299,15 +304,16 @@ h3 {
     left: 50px;
 }
 
-.bt-special a {
+.bt-partner a {
     color: #000;
-    line-height: 30px;
+    text-decoration: none;
 }
-/* / container partner dropbox */
+/* / container partner */
 
 /* container actions */
 .container.actions {
     height: 1200px;
+    margin-bottom: 50px;
 }
 
 .container.actions h3 {
@@ -325,14 +331,16 @@ h3 {
 .act {
     width: calc(1000px / 3 - 60px);
     height: 500px;
-}
-
-.coordinate, .send-files {
-    margin: 0 60px;
+    margin-bottom: 50px;
 }
 
 .act img { 
     width: 100%;
+}
+
+.coordinate, 
+.send-files {
+    margin: 0 60px;
 }
 /* / container actions */
 
@@ -501,7 +509,7 @@ footer {
 .ft-menu{
     width: 1000px;
     margin-bottom: 80px;
-    width: calc(100%/ 5) - (155px / 5);
+    width: calc(100%/5) - (75px/5);
 }
 
 div ul li {
