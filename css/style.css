@@ -196,9 +196,8 @@ form label {
 
 .item-top p::before{
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;   
+    font-weight: 400;   
     margin-right: 5px;
-    font-weight: lighter;
 }
 .item-top.single p::before {
     content: "\f007";  
